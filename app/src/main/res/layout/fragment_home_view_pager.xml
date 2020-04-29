@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.main.fragment.homefragment.viewpager.HomeViewPager">
+
+    <data>
+
+        <import type="com.example.androidnetwoking.view.bindAdapter.HomeViewPagerBind" />
+
+        <import type="com.example.androidnetwoking.util.ConvertString" />
+
+        <variable
+            name="product"
+            type="com.example.androidnetwoking.view.main.fragment.homefragment.viewpager.HomeViewPagerViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv"
+            data="@{product.products}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/hello_blank_fragment" />
+
+        <ImageButton
+            android:background="@drawable/ic_add_circle_black_24dp"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_gravity="right|bottom"
+            android:id="@+id/imgBt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+    />
+    </FrameLayout>
+</layout>

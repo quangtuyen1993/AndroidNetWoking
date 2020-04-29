@@ -1,0 +1,2 @@
+rootProject.name='AndroidNetWoking'
+include ':app'
